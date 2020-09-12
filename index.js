@@ -1,4 +1,3 @@
-
 document
     .addEventListener("DOMContentLoaded",() => {
         document.getElementById("calcula")
@@ -39,6 +38,6 @@ criaMensagem = (siteA, siteB) =>{
     return mensagem;
 }
 
-min = arr => arr.reduce( (p, v) =>  p.resultado < v.resultado ? p : v );
+min = arr => arr.reduce((p, v) => p.resultado < v.resultado ? p : v );
   
 max = arr => arr.reduce((p, v) => p.resultado > v.resultado ? p : v );
