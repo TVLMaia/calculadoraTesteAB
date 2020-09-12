@@ -2,21 +2,21 @@
 document.addEventListener("DOMContentLoaded",() => {
     document.getElementById("calcula")
     .addEventListener("click",() => {
-        var visitantesA = document.getElementById("myVA").value;
-        var conversoesA = document.getElementById("myCA").value;
-        var visitantesB = document.getElementById("myVB").value;
-        var conversoesB = document.getElementById("myCB").value;
 
-        let A = siteFabric("A", visitantesA, conversoesA);
-        let B = siteFabric("B", visitantesB, conversoesB);
+
+        let A = siteFabric("A");
+        let B = siteFabric("B");
 
         window.alert(criaMensagem(A,B));
 
     }); 
 
-    siteFabric = (nome, visitantes, conversoes) => {
-        
+    siteFabric = (nome) => {
+        let div = document.getElementById(nome);
+        let visitantes = div.querySelector('[name="visitantes"]').value;
+        let conversoes = div.querySelector('[name="conversoes"]').value;
         let resultado = Math.trunc((conversoes / visitantes) * 100);
+        
         return {
             nome:nome,
             resultado: resultado
